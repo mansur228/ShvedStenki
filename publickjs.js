@@ -34,7 +34,7 @@ document.getElementById('btn').addEventListener('click' , ()=>{
         Серия дома: ${wall}                                                                                                                                                      
         `;
 
-    let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatц}&text=${massage}`;
+    let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat}&text=${massage}`;
     
     let xhttp = new XMLHttpRequest();
     
