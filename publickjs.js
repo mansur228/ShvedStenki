@@ -1,1 +1,43 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1.2(\'j\').k(\'l\',()=>{0 m="n"0 o="p:q";0 4=1.2(\'4\').3 0 5=1.2(\'5\').3 0 6=1.2(\'6\').3 0 7=1.2(\'7\').3 0 g=1.2(\'r\').3 0 8=1.2(\'8\').3 0 9=1.2(\'9\').3 0 h=1.2(\'s\').3 0 a=1.2(\'a\').3 0 b=1.2(\'b\').3 0 c=1.2(\'c\').3 0 d=1.2(\'d\').3 0 e=1.2(\'e\').3 0 t=`Имя:${4}Фомилия:${5}Номертелефона:${6}Возраст:${7}Модельшведскойстенки:${g}Город:${8}Проспект:${9}Номердома:${h}Секция:${a}Этаж:${b}Квартира:${c}Стенаиз:${d}Сериядома:${e}`;0 i=`u:0 f=v w();f.x("y",i,z);f.A()})',37,37,'let|document|getElementById|value|name|sur_name|phone|age|city|avenue|section|floor|apartment|hame|wall|xhttp|ssn|home_index|url|btn|addEventListener|click|chat|828320523|token|1507992211|AAF9xswgt5GgqwwMSktObz7edGqKq_e4G_Q|shvedStenName|chome_indexity|massage|https|new|XMLHttpRequest|open|GET|true|send'.split('|'),0,{}))
+document.getElementById('btn').addEventListener('click' , ()=>{
+    let chat = "828320523";
+
+    let token = "1507992211:AAF9xswgt5GgqwwMSktObz7edGqKq_e4G_Q";
+    
+    
+    let name = document.getElementById('name').value;
+    let sur_name = document.getElementById('sur_name').value;
+    let phone = document.getElementById('phone').value;
+    let age = document.getElementById('age').value;
+    let ssn = document.getElementById('shvedStenName').value;
+    let city = document.getElementById('city').value;
+    let avenue = document.getElementById('avenue').value;
+    let home_index = document.getElementById('chome_indexity').value;
+    let section = document.getElementById('section').value;
+    let floor = document.getElementById('floor').value;
+    let apartment = document.getElementById('apartment').value;
+    let hame = document.getElementById('hame').value;
+    let wall = document.getElementById('wall').value;
+
+    let massage = `
+        Имя: ${name}                                                                                                                                                      
+        Фомилия: ${sur_name}                                                                                                                                                      
+        Номер телефона: ${phone}                                                                                                                                                      
+        Возраст: ${age}                                                                                                                                                      
+        Модель шведской стенки: ${ssn}                                                                                                                                                      
+        Город: ${city}                                                                                                                                                      
+        Проспект: ${avenue}                                                                                                                                                      
+        Номер дома: ${home_index}                                                                                                                                                      
+        Секция: ${section}                                                                                                                                                      
+        Этаж: ${floor}                                                                                                                                                      
+        Квартира: ${apartment}                                                                                                                                                      
+        Стена из: ${hame}                                                                                                                                                      
+        Серия дома: ${wall}                                                                                                                                                      
+        `;
+
+    let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatц}&text=${massage}`;
+    
+    let xhttp = new XMLHttpRequest();
+    
+    xhttp.open("GET", url, true);
+    xhttp.send();
+});
